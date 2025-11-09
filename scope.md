@@ -1,6 +1,4 @@
 ---
 title: Test Scope
-layout: base
+layout: post
 ---
-
-## Test Scope

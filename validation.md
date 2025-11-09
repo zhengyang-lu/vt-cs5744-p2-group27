@@ -1,6 +1,4 @@
 ---
 title: "Validation Checks"
-layout: base
+layout: post
 ---
-
-## Validation Checks

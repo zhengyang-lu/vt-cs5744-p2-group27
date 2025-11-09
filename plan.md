@@ -1,6 +1,4 @@
 ---
 title: Test Plan
-layout: page
+layout: post
 ---
-
-## Test Plan

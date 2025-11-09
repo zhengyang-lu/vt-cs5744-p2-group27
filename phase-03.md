@@ -1,6 +1,4 @@
 ---
 title: "Phase 3: External Services to Client Integration"
-layout: base
+layout: post
 ---
-
-## Phase 3: External Services to Client Integration
