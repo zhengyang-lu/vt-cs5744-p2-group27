@@ -14,7 +14,7 @@ plugins:
 # The "title" is what users will see.
 # The "url" must match the filename of your markdown file (or just "/" for home).
 minima:
-  skin: auto
+  skin: classic
   nav_pages:
     - index.md
     - scope.md
