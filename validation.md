@@ -1,6 +1,6 @@
 ---
 title: "Validation Checks"
-layout: default
+layout: base
 ---
 
 ## Validation Checks

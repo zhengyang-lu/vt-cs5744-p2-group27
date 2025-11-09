@@ -1,6 +1,6 @@
 ---
 title: Test Scope
-layout: default
+layout: base
 ---
 
 ## Test Scope

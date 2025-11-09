@@ -1,6 +1,6 @@
 ---
 title: "Phase 2: Cloud to External Services Integration"
-layout: default
+layout: base
 ---
 
 ## Phase 2: Cloud to External Services Integration
