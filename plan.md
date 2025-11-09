@@ -1,6 +1,6 @@
 ---
 title: Test Plan
-layout: base
+layout: page
 ---
 
 ## Test Plan
