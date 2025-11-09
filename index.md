@@ -1,6 +1,5 @@
 ---
 title: Home
-layout: default
 ---
 
 ## Smart Food Inventory: Test Plan Document
