@@ -1,18 +1,20 @@
 # Site settings
 title: "Smart Food Inventory: Test Plan Document"
-description: "CS 5744 - Project 2 - Group 27"
 
 show_downloads: false
 
 remote_theme: "jekyll/minima@bf9ef98"
 plugins:
-- jekyll-remote-theme
+  - jekyll-remote-theme
+  - jekyll-feed
+  - jekyll-seo-tag
 
 # Navigation settings
 # This tells the Minima theme which pages to show in the header.
 # The "title" is what users will see.
 # The "url" must match the filename of your markdown file (or just "/" for home).
 minima:
+  skin: auto
   nav_pages:
     - index.md
     - scope.md
@@ -22,5 +24,4 @@ minima:
     - phase-03.md
     - validation.md
 
-# Build settings
-markdown: kramdown
+hide_site_feed_link: true
