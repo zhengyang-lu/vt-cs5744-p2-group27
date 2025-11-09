@@ -4,22 +4,23 @@ description: "CS 5744 - Project 2 - Group 27"
 
 show_downloads: false
 
-# remote_theme: pages-themes/cayman@v0.2.0
-# plugins:
-# - jekyll-remote-theme
+remote_theme: "jekyll/minima@bf9ef98"
+plugins:
+- jekyll-remote-theme
 
 # Navigation settings
 # This tells the Minima theme which pages to show in the header.
 # The "title" is what users will see.
 # The "url" must match the filename of your markdown file (or just "/" for home).
-header_pages:
-  - index.md
-  - scope.md
-  - plan.md
-  - phase-01.md
-  - phase-02.md
-  - phase-03.md
-  - validation.md
+minima:
+  nav_pages:
+    - index.md
+    - scope.md
+    - plan.md
+    - phase-01.md
+    - phase-02.md
+    - phase-03.md
+    - validation.md
 
 # Build settings
 markdown: kramdown
