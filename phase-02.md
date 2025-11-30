@@ -2,3 +2,22 @@
 title: "Phase 2: Cloud to External Services Integration"
 layout: post
 ---
+
+In this phase of testing, we will be focusing on the interactions between the core of the Smart Food Inventory, and its various external services. This will largely be testing outgoing traffic from the application's core. Within this, it will assess the interactions with the Recipe API, calls to the Push Notification service, and information from the Telemetry service. This helps to verify requirements FR-8, FR-11, FR-14, NFR-1b, NFR-2, and NFR-9 from the original design documentation. 
+
+# Phase 2 Test Case Skeletons
+
+| Test Case ID | Test Case Objective | Test Description | Expected Results |
+|--------------|------------------|------------------|------------------------|
+| P2-1a | Verify successful recipe lookup via external Recipe API. | Core sends ingredient list to Recipe API. | API receives properly formatted request and sends suggestions for the core to display. |
+| P2-1b | Validate Core behavior when Recipe API returns malformed or errored data. | Recipe API error on malformed data from Core. | Core logs error via telemetry and avoids error on the front-end. |
+| P2-1c | Ensure Core handles Recipe API network failures gracefully. | Recipe API times out or is otherwise unreachable. | Core handles time out properly, logs the event, and executes fallback functions. |
+| P2-1d | Confirm Core enforces throughput limits for Recipe API calls. | Core handles multiple calls to Recipe API. | Core enforces throughput restriction: only one API call is active at a time; excess requests are queued, processed sequentially, and all outputs are logged with correct ordering. |
+| P2-2a | Validate the Push Notification Service receives correct alert payloads. | Core sends expiration alert payload to Push Notification Service. | Push service receives properly formatted message; user receives alert successfully |
+| P2-2b | Ensure Core handles push notification errors correctly. | Push Notification Service returns an error. | Core logs the error, retries per policy, and avoids duplicate notifications. |
+| P2-2c | Verify high-volume notification dispatch behavior. | Multiple alerts (≥50) triggered simultaneously. | Core batches or queues notifications correctly; no dropped or duplicated alerts. |
+| P2-2d | Ensure Core handles Push Notification Service unavailability. | Push Service is unreachable, returns timeout, or connection fails. | Core logs failure, schedules retry if applicable, and prevents alert loss or repeated notifications. |
+| P2-3a | Ensure Core sends structured logs to Seq / OpenTelemetry collector. | Core emits log events (info, warning, error). | Logs appear in Seq/OTel with correct schema, timestamp, correlation IDs, and severity. |
+| P2-3b | Validate Core emits distributed traces for external-service calls. | Trigger recipe lookup, push notification, or sync event. | Trace spans are captured, linked by correlation ID, and exported properly to OTel collector. |
+| P2-3c | Ensure Core sends telemetry metrics to OTel collector. | Core generates metrics (latency, failure counts, throughput). | Metrics are successfully exported, visible in downstream dashboards, and recorded with correct labels/dimensions. |
+| P2-3d | Verify Core behavior when telemetry collector is unavailable. | Telemetry endpoint down, unreachable, or returns errors. | Core buffers according to configuration (or drops gracefully), avoids blocking critical functions, and records internal fallback events. |
