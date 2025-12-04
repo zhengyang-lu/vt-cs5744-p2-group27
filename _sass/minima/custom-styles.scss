@@ -1,2 +1,12 @@
 // Placeholder to allow defining custom styles that override everything else.
 // (Use `_sass/minima/custom-variables.scss` to override variable defaults)
+
+/* Override width for the Header only */
+.site-header .wrapper {
+  max-width: 1600px; /* Set your desired header width here */
+}
+
+/* Override width for the Page Content only */
+.page-content .wrapper {
+  max-width: 1200px; /* Set your desired content width here */
+}
