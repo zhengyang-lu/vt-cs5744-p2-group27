@@ -3,7 +3,7 @@ title: "Phase 1: Core/Cloud Module Testing"
 layout: post
 ---
 
-In the first phase, we are testing the core functionality of the application's backend logic. This involves isolating the five Cloud/Core modules identified in the architecture (Data Processing, Inventory Management, Notification Engine, Telemetry, and Data Storage) to ensure they process data correctly before any user interface or external service integration occurs.
+In the first phase, we are testing the core functionality of the application's backend logic. This involves isolating the four Cloud/Core modules identified in the architecture (Data Processing, Inventory Management, Telemetry, and Data Storage, minus Notifications) to ensure they process data correctly before any user interface or external service integration occurs.
 
 This phase validates the internal algorithms for OCR parsing, barcode decoding, inventory deduplication, expiration estimation, and data synchronization. External dependencies (like the Recipe API or Push Notification Service) are mocked to ensure we are strictly testing the stability of the application's business logic.
 
