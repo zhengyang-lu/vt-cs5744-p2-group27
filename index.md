@@ -8,3 +8,6 @@ layout: post
 
 Zhengyang Lu, Rahul Vellanki, Melanie Sun, Blessing Nwah, Jonathan Wist
 {: style="text-align: center;"}
+
+[Link to original project](https://sites.google.com/vt.edu/smart-food-inventory/home)
+{: style="text-align: center;"}
