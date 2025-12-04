@@ -10,3 +10,10 @@
 .page-content .wrapper {
   max-width: 1200px; /* Set your desired content width here */
 }
+
+/* Center align the site title */
+.site-title {
+  float: none;
+  display: block;
+  text-align: center;
+}
