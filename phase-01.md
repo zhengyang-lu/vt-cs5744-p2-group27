@@ -27,7 +27,7 @@ The tests will interact with the following modules:
 * DE-5: Telemetry and Logging Module
 * DE-6: Data Storage Layer
 
-# Phase 1 Test Case Skeletons
+## Phase 1 Test Case Skeletons
 
 | Test Case ID | Test Case Objective                                     | Test Description                                                                                                   | Expected Results                                                                                                                             |
 | ------------ | ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------- |
