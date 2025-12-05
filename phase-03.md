@@ -3,9 +3,29 @@ title: "Phase 3: Full Client/UI Integration"
 layout: post
 ---
 
-In this phase, we are validating full client and UI integration to ensure that the application’s front end communicates correctly with the backend services behind it. The goal is to verify that complete user workflows such as scanning receipts (FR-1, FR-6, FR-7), scanning barcodes (FR-2, FR-6, FR-7), manually adding items and syncing them to the cloud (FR-3, FR-5, FR-12), receiving expiration alerts (FR-8, FR-9), fetching recipe suggestions (FR-11), authenticating users (FR-5), and deleting inventory items (FR-4, FR-5, FR-12) function smoothly from the interface through to the backend. This testing focuses on real user actions and checks that UI events trigger the proper cloud requests, that responses are correctly processed and displayed, and that the tests also meet critical non-functional requirements (NFR-1a, NFR-1b, NFR-2, NFR-3, NFR-4, NFR-8, NFR-9). 
+In this phase, we are validating full client and UI integration to ensure that the application’s front end communicates correctly with the backend services behind it. The goal is to verify that complete user workflows such as scanning receipts, scanning barcodes, manually adding items and syncing them to the cloud, receiving expiration alerts, fetching recipe suggestions, authenticating users, and deleting inventory items function smoothly from the interface through to the backend. This testing focuses on real user actions and checks that UI events trigger the proper cloud requests, that responses are correctly processed and displayed.
 
-The following table summarizes the key test cases for full client / UI integration, demonstrating how they help verify these functional and non-functional requirements.
+These tests verify the end-to-end client and UI interactions required to satisfy the corresponding functional and non-functional requirements:
+
+* FR-1: The system shall allow users to scan grocery receipts to add multiple items to their inventory.
+* FR-2: The system shall allow users to scan individual barcodes to add single items.
+* FR-3: The system must allow manual entry of items as a fallback option.
+* FR-4: The system shall support full lifecycle management of inventory items, including manual editing, updating, and deletion.
+* FR-5: The system must store product name, category, purchase date, quantity, expiration date, and location.
+* FR-6: The system must estimate expiration dates when data is unavailable.
+* FR-7: The system must categorize items (e.g., produce, dairy, meat) for organization and shelf-life estimation.
+* FR-8: The system must notify users when an item is nearing its expiration date.
+* FR-9: The system must allow users to customize the number of days before expiration to receive alerts (e.g., 3 days prior, 7 days prior).
+* FR-11: The system shall suggest basic recipe ideas using ingredients that are nearing expiration, leveraging a lightweight API or predefined recipe dataset (Advanced personalization and nutrition filters may be deferred to future releases).
+* FR-12: The system shall allow users to search for and filter items in their inventory.
+* NFR-1a: The system shall respond to user interactions (tap, search, edit) within < 1.0 s at the 95th percentile on a mid-tier device.
+* NFR-1b: The system shall enqueue expiry alerts within < 2 s after an item write and deliver push notifications within < 60 s of the scheduled due time (platform permitting). 
+* NFR-2: The system shall encrypt user data in transit and at rest.
+* NFR-3: The system shall operate both online and offline, synchronizing when connectivity resumes.
+* NFR-4: The system should support barcode formats from major retailers. 
+* NFR-8: The system shall ensure referential and transactional integrity across all persisted data.
+* NFR-9: The system shall implement telemetry and centralized logging for auditability, monitoring, and performance tracking.
+
 
 ## Phase 3 Test Case Skeletons
 
