@@ -4,7 +4,7 @@ layout: post
 ---
 In this phase, we verify that the completed software satisfies all functional and non-functional requirements. The tests examine every module together to confirm the system behaves correctly from end to end.
 
-# Test Case Skeletons
+## Test Case Skeletons
 
 | Test Case ID | Test Description                                                           | Expected Results                                                                                               | Requirement Satisfied |
 | ------------ | -------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | --------------------- |
