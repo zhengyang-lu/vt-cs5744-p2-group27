@@ -3,7 +3,17 @@ title: "Phase 2: Cloud to External Services Integration"
 layout: post
 ---
 
-In this phase of testing, we will be focusing on the interactions between the core of the Smart Food Inventory, and its various external services. This will largely be testing outgoing traffic from the application's core. Within this, it will assess the interactions with the Recipe API, calls to the Push Notification service, and information from the Telemetry service. This helps to verify requirements FR-8, FR-11, FR-14, NFR-1b, NFR-2, and NFR-9 from the original design documentation. 
+In this phase of testing, we will be focusing on the interactions between the core of the Smart Food Inventory, and its various external services. This will largely be testing outgoing traffic from the application's core. Within this, it will assess the interactions with the Recipe API, calls to the Push Notification service, and information from the Telemetry service. 
+
+These tests verify the logic between coming from the core service required by the following set of requirements:
+* FR-8  : The system must notify users when an item is nearing its expiration date. 
+* FR-11 : The system shall suggest basic recipe ideas using ingredients that are nearing expiration, leveraging a lightweight API or predefined recipe dataset (Advanced personalization and nutrition filters may be deferred to future releases). 
+* FR-14 : The system shall provide summary insights on usage and food waste trends. 
+
+These tests also verify non-functional components of the app required by the following set of requirements:
+* NFR-1b : The system shall enqueue expiry alerts within < 2 s after an item write and deliver push notifications within < 60 s of the scheduled due time (platform permitting). 
+* NFR-2 : The system shall encrypt user data in transit and at rest. 
+* NFR-9 : The system shall implement telemetry and centralized logging for auditability, monitoring, and performance tracking. 
 
 ## Phase 2 Test Case Skeletons
 
