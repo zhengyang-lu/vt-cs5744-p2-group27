@@ -3,7 +3,7 @@ title: "Phase 3: Full Client/UI Integration"
 layout: post
 ---
 
-In this phase, we are validating full client and UI integration to ensure that the application’s front end communicates correctly with the backend services behind it. The goal is to verify that complete user workflows such as scanning receipts, scanning barcodes, manually adding items and syncing them to the cloud, receiving expiration alerts, fetching recipe suggestions, authenticating users, and deleting inventory items function smoothly from the interface through to the backend. This testing focuses on real user actions and checks that UI events trigger the proper cloud requests, that responses are correctly processed and displayed.
+In this phase, we are validating full client and UI integration to ensure that the application’s front end communicates correctly with the backend services behind it. The goal is to verify that complete user workflows function smoothly from the interface through to the backend. This testing focuses on real user actions and checks that UI events trigger the proper cloud requests, and that the resulting responses are correctly processed and displayed.
 
 These tests verify the end-to-end client and UI interactions required to satisfy the corresponding functional and non-functional requirements:
 
